@@ -1,4 +1,4 @@
-package dev.simonestefani.lang
+package com.github.simonestefani.lang
 
 internal class Operation(
     internal val type: OperationType,

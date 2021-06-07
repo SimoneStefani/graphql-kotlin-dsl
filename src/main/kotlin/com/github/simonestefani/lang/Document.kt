@@ -1,4 +1,4 @@
-package dev.simonestefani.lang
+package com.github.simonestefani.lang
 
 internal class Document(internal val operation: Operation, internal val variables: Variables) : GraphQLNode() {
     override fun print(

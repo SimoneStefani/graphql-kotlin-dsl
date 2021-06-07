@@ -1,7 +1,7 @@
-package dev.simonestefani
+package com.github.simonestefani
 
 import assertk.tableOf
-import dev.simonestefani.lang.OperationType
+import com.github.simonestefani.lang.OperationType
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance

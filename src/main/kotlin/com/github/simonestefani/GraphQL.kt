@@ -1,15 +1,15 @@
-package dev.simonestefani
+package com.github.simonestefani
 
-import dev.simonestefani.lang.Argument
-import dev.simonestefani.lang.Document
-import dev.simonestefani.lang.Field
-import dev.simonestefani.lang.Operation
-import dev.simonestefani.lang.OperationType
-import dev.simonestefani.lang.PrintFormat
-import dev.simonestefani.lang.SelectionSet
-import dev.simonestefani.lang.Variables
-import dev.simonestefani.types.GraphQLVariable
-import dev.simonestefani.types.GraphQLVariableType
+import com.github.simonestefani.lang.Argument
+import com.github.simonestefani.lang.Document
+import com.github.simonestefani.lang.Field
+import com.github.simonestefani.lang.Operation
+import com.github.simonestefani.lang.OperationType
+import com.github.simonestefani.lang.PrintFormat
+import com.github.simonestefani.lang.SelectionSet
+import com.github.simonestefani.lang.Variables
+import com.github.simonestefani.types.GraphQLVariable
+import com.github.simonestefani.types.GraphQLVariableType
 
 typealias FieldBlock = GraphQL.FieldBuilder.() -> Unit
 

@@ -1,4 +1,4 @@
-package dev.simonestefani.lang
+package com.github.simonestefani.lang
 
 internal class SelectionSet(internal val fields: List<Field>) : GraphQLNode() {
 

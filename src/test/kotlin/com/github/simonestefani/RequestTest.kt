@@ -1,4 +1,4 @@
-package dev.simonestefani
+package com.github.simonestefani
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test

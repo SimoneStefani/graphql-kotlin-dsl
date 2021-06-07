@@ -1,7 +1,7 @@
-package dev.simonestefani.lang
+package com.github.simonestefani.lang
 
-import dev.simonestefani.types.GraphQLVariable
-import dev.simonestefani.types.GraphQLVariableType
+import com.github.simonestefani.types.GraphQLVariable
+import com.github.simonestefani.types.GraphQLVariableType
 
 internal abstract class GraphQLNode {
     var level = 0

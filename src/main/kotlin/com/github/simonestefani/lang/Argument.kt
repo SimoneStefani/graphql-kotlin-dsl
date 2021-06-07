@@ -1,4 +1,4 @@
-package dev.simonestefani.lang
+package com.github.simonestefani.lang
 
 internal open class Argument(internal val args: Map<String, Any> = mapOf()) : GraphQLNode() {
     override fun print(format: PrintFormat, previousLevel: Int): String {

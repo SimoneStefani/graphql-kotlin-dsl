@@ -1,6 +1,6 @@
-package dev.simonestefani.lang
+package com.github.simonestefani.lang
 
-import dev.simonestefani.types.GraphQLVariable
+import com.github.simonestefani.types.GraphQLVariable
 
 internal class Variables : GraphQLNode() {
 

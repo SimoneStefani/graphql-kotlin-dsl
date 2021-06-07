@@ -1,8 +1,8 @@
-package dev.simonestefani
+package com.github.simonestefani
 
 import assertk.tableOf
-import dev.simonestefani.lang.DataEntry
-import dev.simonestefani.lang.PrintFormat
+import com.github.simonestefani.lang.DataEntry
+import com.github.simonestefani.lang.PrintFormat
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance

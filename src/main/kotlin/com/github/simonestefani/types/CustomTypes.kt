@@ -1,4 +1,4 @@
-package dev.simonestefani.types
+package com.github.simonestefani.types
 
 data class GraphQLVariableType(val value: String)
 
