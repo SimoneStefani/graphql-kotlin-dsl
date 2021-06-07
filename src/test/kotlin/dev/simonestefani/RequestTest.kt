@@ -1,4 +1,5 @@
-import dev.simonestefani.Kraph
+package dev.simonestefani
+
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
@@ -6,7 +7,7 @@ import org.junit.jupiter.api.TestInstance
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class RequestTest {
-    private val query = Kraph {
+    private val query = GraphQL {
         query("GetUserId") {
             field("user", args = mapOf("name" to variable("name", "User", "{\"name\": \"UserName\"}"))) {
                 field("id")

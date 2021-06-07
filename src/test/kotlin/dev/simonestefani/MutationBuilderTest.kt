@@ -1,6 +1,6 @@
+package dev.simonestefani
+
 import assertk.tableOf
-import dev.simonestefani.Kraph
-import dev.simonestefani.NoFieldsInSelectionSetException
 import dev.simonestefani.lang.OperationType
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
@@ -10,7 +10,7 @@ import org.junit.jupiter.api.assertThrows
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class MutationBuilderTest {
-    private val mutation = Kraph {
+    private val mutation = GraphQL {
         mutation {
             field("registerUser", args = mapOf("email" to "abcd@efgh.com", "password" to "abcd1234", "age" to 30)) {
                 field("id")
@@ -124,7 +124,7 @@ class MutationBuilderTest {
     @Test
     fun `should be able to print the request for network call with aliases`() {
         // given
-        val mutationWithAliases = Kraph {
+        val mutationWithAliases = GraphQL {
             mutation {
                 field("registerUser", alias = "aliasedRegisterUser", args = mapOf("email" to "abcd@efgh.com")) {
                     field("id")
@@ -147,7 +147,7 @@ class MutationBuilderTest {
         // then
         assertThrows<NoFieldsInSelectionSetException> {
             // when
-            Kraph {
+            GraphQL {
                 mutation { }
             }
         }

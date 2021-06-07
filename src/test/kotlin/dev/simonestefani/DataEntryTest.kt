@@ -1,3 +1,5 @@
+package dev.simonestefani
+
 import assertk.tableOf
 import dev.simonestefani.lang.DataEntry
 import dev.simonestefani.lang.PrintFormat

@@ -1,8 +1,8 @@
 package dev.simonestefani.types
 
-data class KraphVariableType(val value: String)
+data class GraphQLVariableType(val value: String)
 
-data class KraphVariable(val name: String, val type: KraphVariableType, val jsonValue: String) {
+data class GraphQLVariable(val name: String, val type: GraphQLVariableType, val jsonValue: String) {
     val dollarName: String
         get() = "\$$name"
 }

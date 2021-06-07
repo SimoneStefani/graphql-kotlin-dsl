@@ -1,7 +1,7 @@
 package dev.simonestefani.lang
 
-import dev.simonestefani.types.KraphVariable
-import dev.simonestefani.types.KraphVariableType
+import dev.simonestefani.types.GraphQLVariable
+import dev.simonestefani.types.GraphQLVariableType
 
 internal abstract class GraphQLNode {
     var level = 0
@@ -33,8 +33,8 @@ internal abstract class GraphQLNode {
             is Float -> DataEntry.DecimalNumberData(value.toDouble())
             is Boolean -> DataEntry.BooleanData(value)
             is Double -> DataEntry.DecimalNumberData(value)
-            is KraphVariable -> DataEntry.VariableData(value)
-            is KraphVariableType -> DataEntry.VariableType(value)
+            is GraphQLVariable -> DataEntry.VariableData(value)
+            is GraphQLVariableType -> DataEntry.VariableType(value)
             is List<*> -> convertToArrayData(value)
             is Map<*, *> -> convertToObjectData(value as Map<String, *>)
             is Enum<*> -> DataEntry.EnumData(value)

@@ -8,12 +8,12 @@ import dev.simonestefani.lang.OperationType
 import dev.simonestefani.lang.PrintFormat
 import dev.simonestefani.lang.SelectionSet
 import dev.simonestefani.lang.Variables
-import dev.simonestefani.types.KraphVariable
-import dev.simonestefani.types.KraphVariableType
+import dev.simonestefani.types.GraphQLVariable
+import dev.simonestefani.types.GraphQLVariableType
 
-typealias FieldBlock = Kraph.FieldBuilder.() -> Unit
+typealias FieldBlock = GraphQL.FieldBuilder.() -> Unit
 
-class Kraph(f: Kraph.() -> Unit) {
+class GraphQL(f: GraphQL.() -> Unit) {
 
     internal lateinit var document: Document
     internal val variables: Variables = Variables()
@@ -78,8 +78,8 @@ class Kraph(f: Kraph.() -> Unit) {
                 ?: throw NoSuchFragmentException("No fragment named \"$name\" has been defined.")
         }
 
-        fun variable(name: String, type: String, jsonValue: String): KraphVariable =
-            KraphVariable(name, KraphVariableType(type), jsonValue).also {
+        fun variable(name: String, type: String, jsonValue: String): GraphQLVariable =
+            GraphQLVariable(name, GraphQLVariableType(type), jsonValue).also {
                 variables.variables[name] = it
             }
 

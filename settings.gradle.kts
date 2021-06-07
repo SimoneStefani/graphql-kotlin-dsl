@@ -1,1 +1,1 @@
-rootProject.name = "kraphql"
+rootProject.name = "graphql-kotlin-dsl"

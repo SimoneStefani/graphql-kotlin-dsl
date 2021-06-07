@@ -1,6 +1,6 @@
+package dev.simonestefani
+
 import assertk.tableOf
-import dev.simonestefani.Kraph
-import dev.simonestefani.NoSuchFragmentException
 import dev.simonestefani.lang.OperationType
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
@@ -10,7 +10,7 @@ import org.junit.jupiter.api.assertThrows
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class QueryBuilderTest {
-    private val query = Kraph {
+    private val query = GraphQL {
         query("getAllNotes") {
             fieldObject("notes") {
                 field("id")
@@ -159,7 +159,7 @@ class QueryBuilderTest {
     @Test
     fun `should be able to print the request for network call with aliases`() {
         // given
-        val queryWithAliases = Kraph {
+        val queryWithAliases = GraphQL {
             query("getAllNotes") {
                 fieldObject("notes", alias = "aliasedNotes") {
                     field("id", alias = "aliasedId")
@@ -182,7 +182,7 @@ class QueryBuilderTest {
         // then
         assertThrows<NoSuchFragmentException> {
             // when
-            Kraph {
+            GraphQL {
                 query {
                     fieldObject("user") {
                         fragment("FakeFragment")
@@ -195,11 +195,11 @@ class QueryBuilderTest {
     @Test
     fun `should expand the fields in the fragment when the fragment exists`() {
         // given
-        Kraph.defineFragment("UserFragment") {
+        GraphQL.defineFragment("UserFragment") {
             field("name")
             field("email")
         }
-        val query = Kraph {
+        val query = GraphQL {
             query {
                 fieldObject("user") {
                     fragment("UserFragment")

@@ -1,10 +1,10 @@
 package dev.simonestefani.lang
 
-import dev.simonestefani.types.KraphVariable
+import dev.simonestefani.types.GraphQLVariable
 
 internal class Variables : GraphQLNode() {
 
-    val variables = mutableMapOf<String, KraphVariable>()
+    val variables = mutableMapOf<String, GraphQLVariable>()
 
     override fun print(format: PrintFormat, previousLevel: Int): String =
         //format doesn't apply since the json value is passed by the library user

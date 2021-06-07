@@ -1,7 +1,7 @@
 package dev.simonestefani.lang
 
-import dev.simonestefani.types.KraphVariable
-import dev.simonestefani.types.KraphVariableType
+import dev.simonestefani.types.GraphQLVariable
+import dev.simonestefani.types.GraphQLVariableType
 
 internal sealed class DataEntry {
     abstract fun print(format: PrintFormat): String
@@ -20,11 +20,11 @@ internal sealed class DataEntry {
         override fun print(format: PrintFormat) = value.toString()
     }
 
-    class VariableData(private val value: KraphVariable) : DataEntry() {
+    class VariableData(private val value: GraphQLVariable) : DataEntry() {
         override fun print(format: PrintFormat) = value.dollarName
     }
 
-    class VariableType(private val value: KraphVariableType) : DataEntry() {
+    class VariableType(private val value: GraphQLVariableType) : DataEntry() {
         override fun print(format: PrintFormat) = value.value
     }
 
