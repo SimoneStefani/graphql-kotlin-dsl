@@ -13,7 +13,7 @@ repositories {
 dependencies {
     // Test
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
-    testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.27.0")
+    testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.28.0")
 }
 
 tasks.test {
